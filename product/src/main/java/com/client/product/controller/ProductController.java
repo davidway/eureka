@@ -1,4 +1,4 @@
-
+package com.client.product.controller;
 
 import com.client.product.dataobject.ProductCategory;
 import com.client.product.dataobject.ProductInfo;
@@ -37,6 +37,9 @@ public class ProductController {
      * 3. 查询类目
      * 4. 构造数据
      */
+
+
+
     @GetMapping("/list")
     public ResultVO<ProductVO> list() {
         //1. 查询所有在架的商品

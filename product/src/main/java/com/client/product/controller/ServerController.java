@@ -1,14 +1,12 @@
-package com.my.order.controller;
+package com.client.product.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class SeverController {
-    @GetMapping("msg")
+public class ServerController {
+    @GetMapping("/msg")
     public String msg(){
-        Rest
-        return " this is productx msg";
+        return "this is product msg";
     }
-
 }

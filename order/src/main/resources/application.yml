@@ -3,10 +3,10 @@ eureka:
     service-url :
       default-Zone : http://localhost:8761/eureka/
   instance:
-    hostname : product
+    hostname : order
 spring:
   application:
-    name: product
+    name: order
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
