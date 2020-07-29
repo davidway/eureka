@@ -13,8 +13,8 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @Slf4j
 public class ClinetController {
- /*   @Autowired
-    private LoadBalancerClient loadBalancerClient;*/
+    @Autowired
+    private LoadBalancerClient loadBalancerClient;
     @Autowired
     private RestTemplate restTemplate;
 
@@ -24,12 +24,12 @@ public class ClinetController {
         String response = template.getForObject("http://localhost:8080/msg",String.class);
         log.info("response,{}",response);*/
 
-   /*     RestTemplate template = new RestTemplate();
+        RestTemplate template = new RestTemplate();
         ServiceInstance serviceInstance = loadBalancerClient.choose("PRODUCT");
         String url = String.format("http://%s:%s",serviceInstance.getHost(),serviceInstance.getPort());
-        String response = template.getForObject(url,String.class);*/
+        String response = template.getForObject(url,String.class);
 
-   String response = restTemplate.getForObject("http://PRODUCT/msg",String.class);
+ /*  String response = restTemplate.getForObject("http://PRODUCT/msg",String.class);*/
    log.info("response={}",response);
         return response;
     }

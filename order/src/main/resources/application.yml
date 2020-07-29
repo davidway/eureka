@@ -17,3 +17,8 @@ spring:
 server:
   port: 8081
 
+#https://www.docs4dev.com/amp/docs/zh/spring-cloud/Edgware.SR5/reference/multi_spring-cloud-ribbon.html#_customizing_default_for_all_ribbon_clients
+#文档位置
+PRODUCT:
+  ribbon:
+      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
