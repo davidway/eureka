@@ -5,6 +5,7 @@ import com.client.product.dataobject.ProductInfo;
 import com.client.product.service.CategoryService;
 import com.client.product.service.ProductService;
 import com.client.product.util.ResultVOUtil;
+import com.client.product.vo.ProductInfoOutput;
 import com.client.product.vo.ProductInfoVO;
 import com.client.product.vo.ProductVO;
 import com.client.product.vo.ResultVO;
@@ -38,7 +39,11 @@ public class ProductController {
      * 4. 构造数据
      */
 
+    @PostMapping("/listForOrder")
+    public List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIdList) {
 
+        return productService.findList(productIdList);
+    }
 
     @GetMapping("/list")
     public ResultVO<ProductVO> list() {
